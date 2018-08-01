@@ -138,6 +138,6 @@ function reset(){
 
 }
 
-function mousePressed(){
-  reset();
-}
+// function mousePressed(){
+//   reset();
+// }
