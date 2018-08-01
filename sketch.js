@@ -60,7 +60,7 @@ function draw() {
 
 function reset(){
 
-  setTimeout(reset, random(10000, 90000));
+  setTimeout(reset, random(100000, 900000));
   if (saveI) {
     saveCanvas('imagen', 'png');
 
@@ -109,7 +109,7 @@ blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
 break;
   }
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < floor(random(20); i++) {
 
     switch (modo) {
     case 0:
