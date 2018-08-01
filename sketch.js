@@ -75,39 +75,39 @@ function reset(){
   let bl = floor(random(7));
 
 
-//   switch (bl) {
-//   case 0:
-//   blendMode(REPLACE);
-//
-//       break;
-//   case 1:
-//   blendMode(OVERLAY); // funciona wf01 (42)
-//
-//       break;
-//   case 2:
-//   blendMode(BLEND);
-//
-//       break;
-//   case 3:
-//   blendMode(SCREEN);
-//
-//       break;
-//   case 4:
-//   blendMode(ADD);
-//
-//       break;
-//   case 5:
-//   blendMode(SOFT_LIGHT);
-//
-//       break;
-//   case 6:
-//   blendMode(HARD_LIGHT);
-//   break;
-//
-//   case 7:
-// blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
-// break;
-//   }
+  switch (bl) {
+  case 0:
+  blendMode(REPLACE);
+
+      break;
+  case 1:
+  blendMode(OVERLAY); // funciona wf01 (42)
+
+      break;
+  case 2:
+  blendMode(BLEND);
+
+      break;
+  case 3:
+  blendMode(SCREEN);
+
+      break;
+  case 4:
+  blendMode(ADD);
+
+      break;
+  case 5:
+  blendMode(SOFT_LIGHT);
+
+      break;
+  case 6:
+  blendMode(HARD_LIGHT);
+  break;
+
+  case 7:
+blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
+break;
+  }
 
   for (var i = 0; i < 100; i++) {
 
