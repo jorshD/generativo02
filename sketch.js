@@ -109,7 +109,7 @@ blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
 break;
   }
 
-  for (var i = 0; i < floor(random(3)); i++) {
+  for (var i = 0; i < floor(random(10,30)); i++) {
 
     switch (modo) {
     case 0:
@@ -127,13 +127,8 @@ break;
     case 4:
         particles[i] = new Particle(random(width), 2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
         break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
-}
   }
+    }
 
 
 }
