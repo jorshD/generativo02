@@ -75,59 +75,59 @@ function reset(){
   let bl = floor(random(7));
 
 
-//   switch (bl) {
-//   case 0:
-//   blendMode(REPLACE);
+  switch (bl) {
+  case 0:
+  blendMode(REPLACE);
 
-//       break;
-//   case 1:
+      break;
+  case 1:
   blendMode(OVERLAY); // funciona wf01 (42)
 
-//       break;
-//   case 2:
-//   blendMode(BLEND);
+      break;
+  case 2:
+  blendMode(BLEND);
 
-//       break;
-//   case 3:
-//   blendMode(SCREEN);
+      break;
+  case 3:
+  blendMode(SCREEN);
 
-//       break;
-//   case 4:
-//   blendMode(ADD);
+      break;
+  case 4:
+  blendMode(ADD);
 
-//       break;
-//   case 5:
-//   blendMode(SOFT_LIGHT);
+      break;
+  case 5:
+  blendMode(SOFT_LIGHT);
 
-//       break;
-//   case 6:
-//   blendMode(HARD_LIGHT);
-//   break;
+      break;
+  case 6:
+  blendMode(HARD_LIGHT);
+  break;
 
-//   case 7:
-// blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
-// break;
-//   }
+  case 7:
+blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
+break;
+  }
 
   for (var i = 0; i < floor(random(20,30)); i++) {
 
-//     switch (modo) {
-//     case 0:
-//         particles[i] = new Particle(random(width), random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
-//         break;
-//     case 1:
+    switch (modo) {
+    case 0:
+        particles[i] = new Particle(random(width), random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
+        break;
+    case 1:
         particles[i] = new Particle(width/2, height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
-//         break;
-//     case 2:
-//         particles[i] = new Particle(random(width), height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
-//         break;
-//     case 3:
-//         particles[i] = new Particle(2, random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
-//         break;
-//     case 4:
-//         particles[i] = new Particle(random(width), 2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
-//         break;
-//   }
+        break;
+    case 2:
+        particles[i] = new Particle(random(width), height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
+        break;
+    case 3:
+        particles[i] = new Particle(2, random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
+        break;
+    case 4:
+        particles[i] = new Particle(random(width), 2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01));
+        break;
+  }
     }
 
 
