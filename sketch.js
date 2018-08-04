@@ -109,7 +109,7 @@ blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
 break;
   }
 
-  for (var i = 0; i < floor(random(20)); i++) {
+  for (var i = 0; i < floor(random(3)); i++) {
 
     switch (modo) {
     case 0:
