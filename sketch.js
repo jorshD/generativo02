@@ -17,7 +17,7 @@ let saveI = false;
 function setup() {
   createCanvas(1024, 720);
 //  colorMode(HSB, 255);
-
+print("si");
 
 
 
