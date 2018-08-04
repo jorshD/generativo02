@@ -89,11 +89,11 @@ function reset(){
 
       break;
   case 3:
-  blendMode(SCREEN);
+//   blendMode(SCREEN);
 
       break;
   case 4:
-  blendMode(ADD);
+//   blendMode(ADD);
 
       break;
   case 5:
@@ -105,7 +105,7 @@ function reset(){
   break;
 
   case 7:
-blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
+// blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
 break;
   }
 
