@@ -17,7 +17,7 @@ let saveI = false;
 function setup() {
   createCanvas(1024, 720);
 //  colorMode(HSB, 255);
-print("si");
+
 
 
 
@@ -109,7 +109,7 @@ blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
 break;
   }
 
-  for (var i = 0; i < floor(random(20); i++) {
+  for (var i = 0; i < floor(random(20)); i++) {
 
     switch (modo) {
     case 0:
