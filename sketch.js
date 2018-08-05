@@ -6,6 +6,8 @@ var ciclo = 0;
 var zoff = 0;
 
 var fr;
+let cont = 0;
+let ve;
 
 var particles = [];
 
@@ -17,16 +19,11 @@ let saveI = false;
 function setup() {
   createCanvas(1024, 720);
 //  colorMode(HSB, 255);
-
-
-
-
   reset();
 }
 
 
 function draw() {
-
 
   ciclo += inc;
   var yoff = 0;
@@ -34,7 +31,7 @@ function draw() {
     var xoff = 0;
     for (var y = 0; y < rows; y++) {
       var index = x + y * cols;
-      var angle = noise(xoff, yoff, zoff) * TWO_PI * 10.4;
+      var angle = noise(xoff, yoff, zoff) * TWO_PI * floor(random(1, 10));
       var v = p5.Vector.fromAngle(angle);
       v.setMag(forceF);
       flowfield[index] = v;
@@ -60,19 +57,22 @@ function draw() {
 
 function reset(){
 
-  setTimeout(reset, random(100000, 900000));
-  if (saveI) {
-    saveCanvas('imagen', 'png');
 
+  // setTimeout(reset, random(100000, 900000));
+  if (saveI) {
+    // saveCanvas('imagen', 'png');
+    particles.splice(0, ve);
   }
+  ve = floor(random(20,80));
   saveI = true;
+  blendMode(NORMAL);
     background(2);
     cols = floor(width / scl);
     rows = floor(height / scl);
     flowfield = new Array(cols * rows);
-  forceF = random(0.01, 16);
-  let modo = floor(random(5));
-  let bl = floor(random(7));
+  forceF = random(0.01, 6);
+  let modo = floor(random(4));
+  let bl = floor(random(5));
 
 
   switch (bl) {
@@ -88,44 +88,34 @@ function reset(){
   blendMode(BLEND);
 
       break;
-  case 3:
-//   blendMode(SCREEN);
 
-      break;
   case 4:
-//   blendMode(ADD);
-
-      break;
-  case 5:
   blendMode(SOFT_LIGHT);
 
       break;
-  case 6:
+  case 5:
   blendMode(HARD_LIGHT);
   break;
 
-  case 7:
-// blendMode(DODGE); // balnco funcona sobre negro 1 solo tono
-break;
   }
 
-  for (var i = 0; i < floor(random(20,30)); i++) {
+  for (var i = 0; i < ve; i++) {
 
     switch (modo) {
     case 0:
-        particles[i] = new Particle(random(width), random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), 2, 2);
+        particles.push(new Particle(random(width), random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01)));
         break;
     case 1:
-        particles[i] = new Particle(width/2, height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), 3,3);
+        particles.push(new Particle(width/2, height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01)));
         break;
     case 2:
-        particles[i] = new Particle(random(width), height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), 1,1);
+        particles.push(new Particle(random(width), height/2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01)));
         break;
     case 3:
-        particles[i] = new Particle(2, random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), 0.6, 2);
+        particles.push(new Particle(2, random(height), floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01)));
         break;
     case 4:
-        particles[i] = new Particle(random(width), 2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), 3, 0.5);
+        particles.push(new Particle(random(width), 2, floor(random(255)), floor(random(55)), floor(random(200,255)), random(9, 25), random(0.1, 10), random(0.0001, 0.01)));
         break;
   }
     }
