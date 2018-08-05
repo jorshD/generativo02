@@ -48,13 +48,23 @@ function Particle(x, y, r, g, b, s, maxS, sf){
 
       col = this.r;
 
-      this.s = lerp(this.s, 0, this.sf%this.s);
+      this.s = lerp(this.s, 0, 0.02);
       strokeWeight((this.s*2));
       stroke(col, col);
       fill(map(this.s, 0, this.s, 0, 255),col);
       line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
 
       this.updatePev();
+      if (this.s <= 0.2) {
+        cont++;
+         print(cont);
+        if (cont >= ve) {
+          cont = 0;
+          reset();
+      }
+  }
+
+
   }
 
   this.updatePev = function(){
