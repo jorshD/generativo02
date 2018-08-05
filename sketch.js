@@ -60,7 +60,7 @@ function reset(){
 
   // setTimeout(reset, random(100000, 900000));
   if (saveI) {
-    // saveCanvas('imagen', 'png');
+    saveCanvas('imagen', 'png');
     particles.splice(0, ve);
   }
   ve = floor(random(20,80));
